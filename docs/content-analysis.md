@@ -30,7 +30,7 @@ The Gateways API is used as a practical example of the content analysis process.
 
 The analysis identifies:
 
-API identity
+##API identity
 Endpoint
 HTTP method
 Request parameters
