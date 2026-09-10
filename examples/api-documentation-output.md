@@ -4,8 +4,7 @@
 
 The Gateways API returns a list of paths between potential gateway persons and a prospect company.
 
-This documentation is based on the [Gateways API Reference PDF]([(https://github.com/Elly11Nov/Configuration-Documentation/blob/main/docs/samples/Gateways%20API%20Reference.pdf)]).
-
+This documentation is based on the [Gateways API Reference PDF](https://github.com/Elly11Nov/Configuration-Documentation/blob/main/docs/samples/Gateways%20API%20Reference.pdf).
 ## API Information
 
 | Attribute | Value |
