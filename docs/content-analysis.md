@@ -182,14 +182,13 @@ The result of content analysis is a structured representation of the source.
 This structured information becomes an intermediate layer between the original source and the final documentation.
 
 ## 9. From Analysis to Documentation
-
     Structured Information
              ↓
     ┌────────┴────────┐
     ↓                 ↓
-    API Reference     API Tutorial
+API Reference     API Tutorial
     ↓                 ↓
-    Lookup information    Task-oriented guidance
+Lookup information   Task-oriented guidance
 
 The API reference provides detailed technical information.
 
