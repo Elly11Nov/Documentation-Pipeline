@@ -26,3 +26,29 @@ Identify Gaps and Inconsistencies
 Create Structured Information
        ↓
 Ready for Documentation Development
+
+
+Then I would **not immediately launch into lots of theory**.
+
+The next section should be your actual Gateways example:
+
+```markdown
+## Example: Gateways API
+
+The Gateways API source is analysed by identifying and structuring the information required to document the API.
+
+The analysis identifies:
+
+- API identity
+- Endpoint
+- HTTP method
+- Request parameters
+- Parameter types
+- Required and optional parameters
+- Default values
+- Response
+- Response schema
+- Error conditions
+- Examples
+
+The resulting structured information is captured in [`../examples/extracted-api-information.md`](../examples/extracted-api-information.md).
