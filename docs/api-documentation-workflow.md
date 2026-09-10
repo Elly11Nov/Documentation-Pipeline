@@ -147,7 +147,7 @@ For the Gateways API, the tutorial provides a task-oriented path through:
 4. Sending the request
 5. Interpreting the response
 6. Using debug information
-7. Troubleshooting a `400 Bad Request`
+7. Troubleshooting a `400 Bad Request` response
 
 The tutorial is based on the information available in the source rather than inventing additional API behaviour.
 
