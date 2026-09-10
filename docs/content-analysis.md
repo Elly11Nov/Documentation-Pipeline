@@ -1,4 +1,4 @@
-Content Analysis
+# Content Analysis
 
 Content analysis is the second stage of the documentation pipeline.
 
@@ -10,6 +10,7 @@ The objective is to create a structured understanding of the content before docu
 
 The workflow is:
 
+```text
 Source Material
        ↓
 Identify Information Components
@@ -23,7 +24,6 @@ Identify Gaps and Inconsistencies
 Create Structured Information
        ↓
 Ready for Documentation Development
-
 Example: Gateways API
 
 The Gateways API is used as a practical example of the content analysis process.
@@ -31,29 +31,17 @@ The Gateways API is used as a practical example of the content analysis process.
 The analysis identifies:
 
 API identity
-
 Endpoint
-
 HTTP method
-
 Request parameters
-
 Parameter types
-
 Required and optional parameters
-
 Default values
-
 Response
-
 Response schema
-
 Error conditions
-
 Examples
-
 1. Identify Information Components
-
 Gateways API
 ├── API identity
 ├── Endpoint
@@ -67,125 +55,34 @@ Gateways API
 This creates an initial information model before documentation is developed.
 
 2. Classify the Information
+| Information          | Category              |
+| -------------------- | --------------------- |
+| Gateways             | API identity          |
+| REST                 | API type              |
+| 1.0                  | API version           |
+| `GET`                | HTTP method           |
+| `/gateways`          | Endpoint              |
+| `prospect_id`        | Request parameter     |
+| `potential_gateways` | Request parameter     |
+| `debug`              | Request parameter     |
+| `200`                | Response status       |
+| `application/json`   | Response content type |
+| `400 Bad Request`    | Error                 |
+| Parameter                                 | Type    | Required | Default |
+| ----------------------------------------- | ------- | -------: | ------- |
+| `prospect_id`                             | string  |      Yes | —       |
+| `potential_gateways`                      | string  |      Yes | —       |
+| `number_of_path_per_gw_person`            | integer |       No | 10      |
+| `number_of_gw_person_per_prospect_person` | integer |       No | 10      |
+| `number_of_prospect_person`               | integer |       No | —       |
+| `debug`                                   | boolean |       No | false   |
 
-Information
-
-Category
-
-Gateways
-
-API identity
-
-REST
-
-API type
-
-1.0
-
-API version
-
-GET
-
-HTTP method
-
-/gateways
-
-Endpoint
-
-prospect_id
-
-Request parameter
-
-potential_gateways
-
-Request parameter
-
-debug
-
-Request parameter
-
-200
-
-Response status
-
-application/json
-
-Response content type
-
-400 Bad Request
-
-Error
-
-Classification makes the information easier to structure and reuse.
-
-3. Analyse Parameters
-
-Parameter
-
-Type
-
-Required
-
-Default
-
-prospect_id
-
-string
-
-Yes
-
-—
-
-potential_gateways
-
-string
-
-Yes
-
-—
-
-number_of_path_per_gw_person
-
-integer
-
-No
-
-10
-
-number_of_gw_person_per_prospect_person
-
-integer
-
-No
-
-10
-
-number_of_prospect_person
-
-integer
-
-No
-
-—
-
-debug
-
-boolean
-
-No
-
-false
-
-The full extracted information is captured in ../examples/extracted-api-information.md.
-
-4. Analyse the Response
+Analyse the Response
 
 The source documents a successful response with:
 
 Status: 200
 Content type: application/json
-
-The response contains information about prospects, gateway persons and paths.
 
 Response
 └── list_of_prospects
@@ -198,8 +95,6 @@ Response
         └── paths
             └── path_time_in_ms
 
-Some fields are associated with debug information.
-
 5. Analyse Errors
 
 The source documents an HTTP 400 Bad Request response.
@@ -207,7 +102,6 @@ The source documents an HTTP 400 Bad Request response.
 The documented causes include:
 
 No company for the supplied prospect ID
-
 Invalid parameter value
 
 No additional error behaviour is assumed where it is not documented by the source.
@@ -216,6 +110,7 @@ No additional error behaviour is assumed where it is not documented by the sourc
 
 Content analysis considers how individual pieces of information relate to each other.
 
+Endpoint
 Endpoint
     ↓
 Request parameters
@@ -237,9 +132,7 @@ The analysis identifies information that is missing, unclear or inconsistent.
 If the source does not document items such as:
 
 Authentication
-
 Base URL
-
 Request headers
 
 they are treated as undocumented information.
@@ -249,15 +142,10 @@ They are not replaced with assumptions or invented technical details.
 Other issues that may require review include:
 
 Inconsistent terminology
-
 Unclear descriptions
-
 Missing parameter information
-
 Examples that require clarification
-
 Information referenced in one section but not explained elsewhere
-
 8. Create Structured Information
 
 The result of content analysis is a structured representation of the source.
@@ -282,7 +170,6 @@ API
 This structured information becomes an intermediate layer between the original source and the final documentation.
 
 9. From Analysis to Documentation
-
                  Structured Information
                          ↓
                 ┌────────┴────────┐
@@ -294,9 +181,6 @@ This structured information becomes an intermediate layer between the original s
 The API reference provides detailed technical information.
 
 The tutorial uses the same underlying information to guide users through a task.
-
-Analysis Checklist
-
 [ ] Main information components identified
 [ ] API identity identified
 [ ] Endpoint and HTTP method identified
