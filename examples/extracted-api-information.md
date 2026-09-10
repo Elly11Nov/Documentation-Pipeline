@@ -4,7 +4,7 @@
 
 This structured information was extracted from the **Gateways API Reference**, an existing REST API reference used as the source for this documentation pipeline.
 
-[View the Gateways API Reference PDF](LINK_TO_GATEWAYS_PDF)
+[View the Gateways API Reference PDF](https://github.com/Elly11Nov/Configuration-Documentation/blob/main/docs/samples/Gateways%20API%20Reference.pdf)
 
 The information below reflects the content provided by the source document.
 
